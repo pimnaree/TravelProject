@@ -1,0 +1,213 @@
+import 'package:day2_trip/FadeTravel.dart.dart';
+import 'package:flutter/material.dart';
+
+import 'FadeTravel.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+import 'FadeTravel.dart.dart';
+
+void main() => runApp(
+  MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(fontFamily: 'Nunito'),
+    home: HomePage(),
+  )
+);
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
+  PageController _pageController;
+  int totalPage = 10;
+
+  void _onScroll() {
+  }
+
+  @override
+  void initState() {
+    _pageController = PageController(
+      initialPage: 0,
+    )..addListener(_onScroll);
+
+    super.initState();
+  } 
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: PageView(
+        controller: _pageController,
+        children: <Widget>[
+          makePage(
+            page: 1,
+            image: 'assets/images/one.jpg',
+            title: 'เชียงราย',
+            description: 'เชียงราย เหนือสุดแดนสยาม ี่เรายังคงเห็นชีวิตความเป็นอยู่รวมถึงวัฒนธรรมประเพณีดั้งเดิมของชาวล้านนาและชนเผ่าต่างๆ นักท่องเที่ยวนิยมขึ้นเขาไปชมทะเลหมอกและความสวยงามของธรรมชาติบนดอยสูง ภูชี้ฟ้า ภูชี้ดาว ดอยแม่สลอง หรือจะท่องเที่ยวทำกิจกรรมในไร่บุญรอด ชมไร่ชาที่ฉุยฟง เดินสะพานเรือนยอดไม้ Tree top walk ในดอยตุง.'
+          ),
+          makePage(
+            page: 2,
+            image: 'assets/images/two.jpg',
+            title: 'เชียงใหม่',
+            description: 'เชียงใหม่ จังหวัดยอดฮิตที่ใครๆก็อยากไปเที่ยวไม่ว่าจะไหว้พระ ถ่ายรูป กินอาหารพื้นเมือง เที่ยวได้ทุกฤดูกาล สถานที่ไหว้พระดังๆแน่นอนว่าจะต้องเป็น "วัดพระธาตุดอยสุเทพราชวรวิหาร" เป็นวัดคู่บ้านคู่เมืองภายในเป็นที่ประดิษฐานขององค์เจดีย์ทรงมอญที่ใต้ฐานพระเจดีย์มีพระบรมสารีริกธาตุของสมเด็จพระสัมมาสัมพุทธเจ้าบรรจุอยู่อีกทั้งยังเป็นพระธาตุประจำปีมะแมด้วยหรือหากใครเกิดปีชวดไม่ควรพลาด "วัดพระธาตุศรีจอมทองวรวิหาร" เป็นอย่างยิ่ง '
+          ),
+          makePage(
+            page: 3,
+            image: 'assets/images/three.jpg',
+            title: 'เพรชบูรณ์',
+            description: "เพรชบูรณ์ สภาพแวดล้อมทั่วไปเป็นป่าเขียวชะอุ่มโอบล้อมด้วยยอดเขามีพรรณไม้ขึ้นหนาแน่น อากาศเย็นสบายตลอดทั้งปีมีแหล่งท่องเที่ยวมากมายที่ไปสิบครั้งก็ไม่หมด ถ้ามาหน้าฝนก็จะมองเห็นหมอกหนาตากับความเขียวของป่าเขาและดอกไม้เบ่งบาน หากมาหน้าหนาวหมอกยังลอยฟุ้งแต่เพิ่มเติมคือลมหนาวนักท่องเที่ยวนิยมมานอนกางเต๊นท์เพื่อรอชมทะเลหมอก โดยเฉพาะบนภูทับเบิก แหล่งปลูกกะหล่ำที่ใหญ่ที่สุดในประเทศ."
+          ),
+          makePage(
+            page: 4,
+            image: 'assets/images/four.jpg',
+            title: 'เลย',
+            description: "เลย เป็นจังหวัดชายแดนอยู่เกือบเหนือสุดในภาคตะวันออกเฉียงเหนือมีพรมแดนทางทิศเหนือติดกับประเทศลาวและด้วยภูมิประเทศที่ประกอบไปด้วยภูเขาใหญ่น้อยประมาณร้อยละ70ของพื้นที่ สถานที่ท่องเที่ยวสำคัญของจังหวัดเลยส่วนใหญ่จึงเป็นสถานที่ท่องเที่ยวตามธรรมชาติดังคำขวัญของจังหวัดที่ว่า“เมืองแห่งทะเลภูเขา สุดหนาวในสยาม ดอกไม้งามสามฤดู”."
+          ),
+          makePage(
+              page: 5,
+              image: 'assets/images/five.jpg',
+              title: 'อุบลราชธานี',
+              description: "อุบลราชธานี ทิศตะวันออกมีดินแดนพิศวงรอคุณอยู่ที่อุดมธรรมชาติพร้อมชมแสงแรกก่อนใคร ด้วยความที่เป็นจังหวัดใหญ่ทำให้มีสถานที่ท่องเที่ยวทางศาสนาและธรรมชาติมากมายอุดมไปด้วยแก่งหิน หน้าผา ผืนป่า และวัดวา โดยแต่ละแห่งความสวยงามก็ไม่ใช่เล่นๆแถมยิ่งใหญ่อลังการจนคุณก็อาจคาดไม่ถึง เราจะพาคุณไปพบกับ 7 สิ่งมหัศจรรย์อุบลราชธานีคุณจะประทับใจไปตลอดกาล."
+          ),
+          makePage(
+              page: 6,
+              image: 'assets/images/six.jpg',
+              title: 'พังงา',
+              description: "พังงา หากใครชอบไปทะเลนอนฟังเสียงคลื่นยืนมองท้องฟ้าเงยหน้ารับลมเดินชมหาดทราย ับรองว่าฟินเวอร์ ทีเด็ดของพังงาคือ เกาะแก่งต่างๆเหมาะสำหรับผู้หลงใหลในวิถีชีวิตชาวเกาะเป็นที่สุด."
+          ),
+          makePage(
+              page: 7,
+              image: 'assets/images/seven.jpg',
+              title: 'ภูเก็ต',
+              description: "ภูเก็ต เมืองท่องเที่ยวสุดฮิตแห่งแดนใต้ของไทยและเป็นเกาะที่มีขนาดใหญ่ที่สุดของประเทศ นอกจากนี้ภูเก็ตยังเป็นแหล่งประวัติศาสตร์และวัฒนธรรมที่สำคัญของไทย เป็นเมืองที่มีชนชาติหลากหลายมาตั้งรกรากจนเกิดเป็นวัฒนธรรมท้องถิ่นที่น่าสนใจ แหล่งอาหารท้องถิ่นที่นี่มีทั้งอาหารจีนต้นตำรับ อาหารทะเลสดอร่อยจนไปถึงอาหารใต้หรอยแรง นอกจากนั้นยังเป็นแหล่งที่ตั้งของอาคารชิโนโปรตุกีสที่เหลืออยู่ไม่มากในปัจจุบัน และดงสตรีทอาร์ทในเมืองภูเก็ตก็นับว่าฮิปและฮิตในอันดับต้นๆของประเทศเลย."
+          ),
+          makePage(
+              page: 8,
+              image: 'assets/images/eight.jpg',
+              title: 'กรุงเทพมหานคร',
+              description: "กรุงเทพมหานคร ถือได้ว่าเป็นจังหวัดที่คับคังไปด้วยนักท่องเที่ยวทั้งชาวไทยและต่างชาติ เพราะเป็นเมืองหลวงของประเทศไทยเพราะเป็นเมืองหลวงของประเทศไทย อีกทั้งยังเป็นศูนย์รวมของความบันเทิงทั้งหลาย ไม่ว่าจะเป็นห้างสรรพสินค้าี่มีอยู่ทั่วเมือง สถานแหล่งความบันเทิงกลางคืนและเขตเมืงเก่าที่มีวัดวาอารามที่เป็นสถานที่สำคัญทางประวัติศาสตร์."
+          ),
+          makePage(
+              page: 9,
+              image: 'assets/images/nine.jpg',
+              title: 'กาญจนบุรี',
+              description: "กาญจนบุรี ที่นี่ถือเป็นอีกหนึ่งจุดหมายของนักท่องเที่ยว มีที่ท่องเที่ยวธรรมชาติอย่าง น้ำตกเอราวัณ น้ำตกไทรโยค ที่เที่ยวทางประวัติศาสตร์อย่าง สุสานทหารสัมพันธมิตรดอนรัก ทางรถไฟสายมรณะ หรืออยากผจญภัยแบบเสียวสุดติ่งก็ต้องลองเดินขึ้นยอดเขาช้างเผือก หากอยากนอนชิลล์ๆ ฟังเสียงสายน้ำที่กาญจนบบุรีเขาก็มีแพพักให้เลือกนอนหลายที่เลยทีเดียว."
+          ),
+          makePage(
+              page: 10,
+              image: 'assets/images/ten.jpg',
+              title: 'ตาก',
+              description: "ตาก เป็นจังหวัดทางภาคเหนือตอนล่างมีความสมบูรณ์ทางธรรมชาติแถมยังสามารถเที่ยวได้ตลอดทั้งปี ในด้านของสถาปัตยกรรมมีเจดีย์และวัดศิลปะแบบมอญ นอกจากนี้ก็มีวัดวาอารามศิลปะแบบไทยสมัยสุโขทัยและอยุธยารวมถึงตึกรามบ้านช่องรูปทรงคลาสสิกสไตล์ยุโรปสมัยรัชกาลที่ 5."
+          ),
+        ],
+      ),
+    );
+  }
+  Widget makePage({image, title, description, page}) {
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(image),
+          fit: BoxFit.cover
+        )
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.bottomRight,
+            stops: [0.3, 0.9],
+            colors: [
+              Colors.black.withOpacity(.9),
+              Colors.black.withOpacity(.2),
+            ]
+          )
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.baseline,
+                textBaseline: TextBaseline.alphabetic,
+                children: <Widget>[
+                  FadeTravel(2, Text(page.toString(), style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),)),
+                  Text('/10' , style: TextStyle(color: Colors.white, fontSize: 15),)
+                ],
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    FadeTravel(1,
+                      Text(title, style: TextStyle(color: Colors.white, fontSize: 50, height: 1.2, fontWeight: FontWeight.bold),)
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    FadeTravel(1.5, Row(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(right: 3),
+                          child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 3),
+                          child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 3),
+                          child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 3),
+                          child: Icon(Icons.star, color: Colors.yellow, size: 15,),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 5),
+                          child: Icon(Icons.star, color: Colors.grey, size: 15,),
+                        ),
+                        Text('4.0', style: TextStyle(color: Colors.white70),),
+                        Text('(2300)', style: TextStyle(color: Colors.white38, fontSize: 12),)
+                      ],
+                    )),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    FadeTravel(2, Padding(
+                      padding: const EdgeInsets.only(right: 50),
+                      child: Text(description, style: TextStyle(color: Colors.white.withOpacity(.7), height: 1.9, fontSize: 15),),
+                    )),
+                    SizedBox(height: 20,),
+                    //FadeAnimation(2.5, Text('READ MORE', style: TextStyle(color: Colors.white),)),
+                    SizedBox(height: 30,),
+                  ],
+                ),
+              )
+            ]
+          ),
+        ),
+      ),
+    );
+  }
+}
